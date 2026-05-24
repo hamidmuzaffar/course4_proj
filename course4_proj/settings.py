@@ -42,6 +42,7 @@ class Dev(Configuration):
 
   INSTALLED_APPS = [
       'movies',
+      'django_celery_results',
       'django.contrib.admin',
       'django.contrib.auth',
       'django.contrib.contenttypes',
@@ -157,4 +158,6 @@ class Dev(Configuration):
 
   DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-  OMDB_KEY = values.SecretValue()
+  CELERY_RESULT_BACKEND = "django-db"
+  CELERY_BROKER_URL = "redis://localhost:6379/0"
+  OMDB_KEY = "d79ae8ae"

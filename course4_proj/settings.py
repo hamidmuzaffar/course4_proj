@@ -43,6 +43,7 @@ class Dev(Configuration):
   INSTALLED_APPS = [
       'movies',
       'django_celery_results',
+      'django_celery_beat',
       'django.contrib.admin',
       'django.contrib.auth',
       'django.contrib.contenttypes',
